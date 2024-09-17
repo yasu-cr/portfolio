@@ -1,4 +1,3 @@
-version: "3"
 services:
   db:
     image: postgres
@@ -11,6 +10,10 @@ services:
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    environment:
+      POSTGRES_USER: <%= ENV['POSTGRES_USER'] %>
+      POSTGRES_PASSWORD: <%= ENV['POSTGRES_PASSWORD'] %>
+      DATABASE_HOST: <%= ENV['DATABASE_HOST'] %>
     volumes:
       - .:/myapp
     ports:

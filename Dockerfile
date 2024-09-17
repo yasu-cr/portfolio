@@ -11,6 +11,8 @@ RUN bundle update --bundler
 RUN bundle install
 COPY . /myapp
 
+ENV RAILS_ENV=production
+
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
