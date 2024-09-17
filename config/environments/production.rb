@@ -93,6 +93,6 @@ Rails.application.configure do
 
   config.hosts << "localhost"
   config.hosts << "portfolio-9ki9.onrender.com" # Render のホスト名
-  config.hosts << "dpg-crklqcm8ii6s738293e0-a.singapore-postgres.render.com" # PostgreSQL のホスト名
+  config.hosts << "dpg-crklqcm8ii6s738293e0-a.singapore-postgres.render.com"
   #config.hosts.clear # すべてのホストを許可する
 end

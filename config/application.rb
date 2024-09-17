@@ -13,6 +13,7 @@ module Myapp
 
     config.hosts << "localhost"
     config.hosts << "portfolio-9ki9.onrender.com" # Render のホスト名
+    config.hosts << "dpg-crklqcm8ii6s738293e0-a.singapore-postgres.render.com"
 
     # Configuration for the application, engines, and railties goes here.
     #
