@@ -11,9 +11,11 @@ services:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     environment:
-      POSTGRES_USER: <%= ENV['POSTGRES_USER'] %>
-      POSTGRES_PASSWORD: <%= ENV['POSTGRES_PASSWORD'] %>
-      DATABASE_HOST: <%= ENV['DATABASE_HOST'] %>
+      DATABASE_HOST: db # Docker Compose 内部でのホスト名
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_URL: ${DATABASE_URL}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - .:/myapp
     ports:

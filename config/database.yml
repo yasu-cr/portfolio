@@ -23,6 +23,6 @@ test:
 production:
   <<: *default
   database: db
-  host: dpg-crklqcm8ii6s738293e0-a
-  #username: <%= ENV["POSTGRES_USER"] %>
+  host: <%= ENV["DATABASE_HOST"] %>
+  username: <%= ENV["POSTGRES_USER"] %>
   password: <%= ENV["POSTGRES_PASSWORD"] %>
