@@ -11,11 +11,11 @@ services:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     environment:
-      DATABASE_HOST: db # Docker Compose 内部でのホスト名
-      DATABASE_NAME: ${DATABASE_NAME}
-      DATABASE_URL: ${DATABASE_URL}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      DATABASE_HOST: dpg-crklqcm8ii6s738293e0-a.singapore-postgres.render.com # Render のホスト名
+      DATABASE_NAME: db_kduk
+      DATABASE_URL: postgresql://db_kduk_user:2YKG0P4pE4hCDNQF6rkxAktm8qottJTO@dpg-crklqcm8ii6s738293e0-a.singapore-postgres.render.com/db_kduk
+      POSTGRES_USER: db_kduk_user
+      POSTGRES_PASSWORD: 2YKG0P4pE4hCDNQF6rkxAktm8qottJTO
     volumes:
       - .:/myapp
     ports:
