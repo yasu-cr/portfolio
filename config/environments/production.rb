@@ -91,7 +91,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  #config.hosts << "localhost"
+  config.hosts << "localhost"
   config.hosts << "portfolio-9ki9.onrender.com" # Render のホスト名
   config.hosts << "dpg-crklqcm8ii6s738293e0-a.singapore-postgres.render.com"
   #config.hosts.clear # すべてのホストを許可する
