@@ -11,7 +11,7 @@ module Myapp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.hosts << "localhost"
+    #config.hosts << "localhost"
     config.hosts << "portfolio-9ki9.onrender.com" # Render のホスト名
     config.hosts << "dpg-crklqcm8ii6s738293e0-a.singapore-postgres.render.com"
 
