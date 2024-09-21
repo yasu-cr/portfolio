@@ -1,0 +1,9 @@
+<% if resource.errors[attribute].uniq.any? %>
+  <div class="error_messages">
+    <ul>
+      <% resource.errors[attribute].uniq.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

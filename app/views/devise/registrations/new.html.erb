@@ -1,0 +1,37 @@
+<%= form_with(model: resource, scope: resource_name, url: registration_path(resource_name), html: { novalidate: true }, local: true) do |f| %>
+  <div class="content main-content">
+ <h2>新規登録</h2>
+ 
+   <div class="box-form">
+     <div class="box-inner">
+       <div class="field">
+         <%= f.label :氏名 %><br>
+         <%= f.text_field :name, autofocus: true, class: 'form' %>
+         <!-- 氏名のエラーメッセージ -->
+         <%= render 'devise/shared/error_messages', resource: resource, attribute: :name %>
+         </div>
+ 
+         <div class="field">
+           <%= f.label :メールアドレス %><br />
+           <%= f.email_field :email, autocomplete: "email", class: 'form' %>
+           <%= render 'devise/shared/error_messages', resource: resource, attribute: :email %>
+         </div>
+ 
+         <div class="field">
+           <%= f.label :パスワード %>
+           <% if @minimum_password_length %>
+           
+           
+           <% end %><br />
+           <%= f.password_field :password, autocomplete: "new-password", class: 'form' %>
+           <%= render 'devise/shared/error_messages', resource: resource, attribute: :password %>
+         </div>
+ 
+         <div class="actions">
+           <%= f.submit "登録する", class: 'sign-btn' %>
+         </div>
+       </div>
+     </div>
+   </div>
+ <% end %>
+ 

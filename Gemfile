@@ -41,5 +41,12 @@ group :production do
   gem 'pg', '~> 1.5.3'
 end
 
+gem 'devise', '4.9.4'
+gem 'bcrypt', '3.1.20'
+gem 'orm_adapter', '0.5.0'
+gem 'responders', '3.1.1'
+gem 'warden', '1.2.9'
+gem 'rails-i18n', '~> 7.0.9'
+
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
 # gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
