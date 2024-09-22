@@ -18,6 +18,9 @@ services:
       POSTGRES_PASSWORD: 2YKG0P4pE4hCDNQF6rkxAktm8qottJTO
     volumes:
       - .:/myapp
+      - ./Gemfile:/myapp/Gemfile
+      - ./Gemfile.lock:/myapp/Gemfile.lock
+      - ./tmp:/myapp/tmp
     ports:
       - "3000:3000"
     depends_on:

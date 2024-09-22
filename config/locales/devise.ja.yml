@@ -1,0 +1,27 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: "氏名"
+        password: "パスワード"
+        password_confirmation: "パスワード確認"
+        email: "メールアドレス"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "%{attribute}は必ず入力してください。"
+            email:
+              blank: "%{attribute}は必ず入力してください。"
+              invalid_format: "%{attribute}は正しい形式で入力してください。"
+              invalid: "%{attribute}は正しい形式で入力してください。"
+              taken: "%{attribute}はすでに存在しています。"
+            password:
+              blank: "%{attribute}は必ず入力してください。"
+              too_short: "%{attribute}は%{count}文字以上でなければなりません。"
+  devise:
+    failure:
+      user:
+        invalid: 'メールアドレスまたはパスワードが違います。'
+        not_found_in_database: 'メールアドレスまたはパスワードが違います。'

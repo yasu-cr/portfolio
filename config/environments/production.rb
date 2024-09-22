@@ -97,4 +97,7 @@ Rails.application.configure do
   #config.hosts.clear # すべてのホストを許可する
 
   config.consider_all_requests_local = true
+
+  config.assets.compile = true
+  config.assets.precompile += %w(application.css application.js)
 end

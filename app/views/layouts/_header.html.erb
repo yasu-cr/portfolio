@@ -1,0 +1,8 @@
+<div class="header">
+  <div class="header-logo"><a href="/">My Portfolio</a></div>
+  <div class="log-in">
+    <% unless params[:controller] == 'devise/sessions' && params[:action] == 'new' %>
+      <%= render "devise/shared/links" %>
+    <% end %>
+  </div>
+</div>
