@@ -1,27 +1,29 @@
-<div class="contents row">
-  <div class="container">
-    <h2>Log in</h2>
-    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
-      </div>
+<%= form_with(model: resource, scope: resource_name, url: session_path(resource_name), html: { novalidate: true }, local: true) do |f| %>
+  <div class="content main-content">
+  <h2>ログイン</h2>
 
-      <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
-
-      <% if devise_mapping.rememberable? %>
+  <div class="box-form">
+      <div class="box-inner">
         <div class="field">
-          <%= f.label :remember_me %><br />
-          <%= f.check_box :remember_me %>
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form'  %>
+          <%= render 'devise/shared/error_messages', resource: resource, attribute: :email %>
         </div>
-      <% end -%>
 
-      <div class="actions">
-        <%= f.submit "Log in" %>
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password", class: 'form' %>
+          <%= render 'devise/shared/error_messages', resource: resource, attribute: :password %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "ログインする", class: 'log-btn' %>
+        </div>
+
+        <div class="actions">
+          <%= link_to "新規登録", new_registration_path(resource_name), class: "sign-up-btn"  %>
+        </div>
       </div>
-    <% end %>
+    </div>
   </div>
-</div>
+<% end %>

@@ -19,13 +19,6 @@ test:
   username: postgres
   password: password
 
-#production:
-  #<<: *default
-  #database: db_kduk
-  #host: <%= ENV["DATABASE_HOST"] %>
-  #username: <%= ENV["POSTGRES_USER"] %>
-  #password: <%= ENV["POSTGRES_PASSWORD"] %>
-
 production:
   <<: *default
   adapter: postgresql
