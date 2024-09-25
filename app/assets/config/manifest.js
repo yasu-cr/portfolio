@@ -3,5 +3,6 @@
 //= link_tree ../../javascript .js
 //= link_tree ../../../vendor/javascript .js
 //= link application.css
+//= link application.js
 //= link normalize.css
 //= link controllers/index.js

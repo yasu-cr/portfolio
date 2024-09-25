@@ -143,6 +143,14 @@ h2 {
   background-color: #1B5678;
 }
 
+.header.login-page {
+  justify-content: center; /* ロゴをセンターに配置 */
+}
+
+.header-logo {
+  flex: 1; /* 左側に配置するためのスペースを確保 */
+}
+
 .header-logo a {
   text-decoration: none;
   font-size: 26px;  
@@ -161,6 +169,14 @@ h2 {
   border-radius: 4px;
   border: 2px solid;
   padding: 16px 40px;
+}
+
+.log-in {
+  display: none;
+}
+
+.header.login-page .log-in {
+  display: none;
 }
 
 /* footer */
