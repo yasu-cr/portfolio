@@ -1,8 +1,14 @@
 <div class="header">
-  <div class="header-logo"><a href="/">My Portfolio</a></div>
+  <div class="header-logo" style="<%= current_page?(new_user_session_path) ? 'text-align: center;' : '' %>">
+    <a href="/">My Portfolio</a>
+  </div>
   <div class="log-in">
-    <% unless params[:controller] == 'devise/sessions' && params[:action] == 'new' %>
-      <%= render "devise/shared/links" %>
+    <% if user_signed_in? %>
+      <%= link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete } %>
+    <% else %>
+      <% unless current_page?(new_user_session_path) || flash[:alert].present? || flash[:error].present? %>
+        <%= link_to 'ログイン', new_user_session_path %>
+      <% end %>
     <% end %>
   </div>
 </div>

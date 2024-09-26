@@ -2,7 +2,10 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def index
-    render html: '<a href="/users/sign_up">新規登録はこちら</a>'.html_safe
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+    new_user_session_path
   end
 
   private
