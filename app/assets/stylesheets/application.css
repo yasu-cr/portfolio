@@ -144,11 +144,11 @@ h2 {
 }
 
 .header.login-page {
-  justify-content: center; /* ロゴをセンターに配置 */
+  justify-content: center;
 }
 
 .header-logo {
-  flex: 1; /* 左側に配置するためのスペースを確保 */
+  flex: 1;
 }
 
 .header-logo a {
@@ -171,13 +171,6 @@ h2 {
   padding: 16px 40px;
 }
 
-.log-in {
-  display: none;
-}
-
-.header.login-page .log-in {
-  display: none;
-}
 
 /* footer */
 
